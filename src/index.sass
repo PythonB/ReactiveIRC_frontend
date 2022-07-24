@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@400&display=swap')
+
+$font-main: 'Roboto', sans-serif
+$font-mono: 'Roboto Mono', monospace
+$background-color: #2E3440
+$accent-color-1: #3B4252
+$accent-color-2: #A0EEC0
+$text-color: #616D86
+$note-color: #58647C
+
+body
+    background-color: $background-color
+    color: $text-color
+    font-family: $font-main
+    margin: 0
+    padding: 0
+
+#topbar
+    height: 6vh
+    padding: 0
+    overflow: hidden
+    background-color: $accent-color-1
+    h1
+        font-size: 5vh
+        display: inline
+        margin: 0
+    h2
+        display: inline
+        margin: 0
+        color: $note-color
+/*#secondbar
+    height: 3vh
+    padding-top: 0.5vh
+    div
+        display: inline-block
+    h3
+        font-size: 2.5vh
+        display: inline
+        padding: 0 0 0 12pt 
+        margin: 0
+    hr
+        margin: 0
+        border: 1px solid $accent-color-1
+    #segment1
+        width: 15%
+        border-right: 2px solid $accent-color-1
+        min-width: 75pt
+    #segment2
+        width: 70%
+        border-right: 2px solid $accent-color-1
+    #segment3
+        width: 14%
+        min-width: 70pt*/
+#wrapper
+    display: flex
+    height: 91vh
+/*#channellist
+    padding-top: 6pt
+    margin: 0
+    display: inline-block
+    width: 15%
+    min-width: 75pt
+    border-right: 2px solid $accent-color-1
+    p
+        margin: 0
+        padding: 0 0 0 12pt
+    .chatlist-entry
+        display: inline-block
+        margin: 2pt 0 2pt 0*/
+#chatwindow
+    display: inline-block
+    width: 80%
+    border-right: 2px solid $accent-color-1
+    font-family: $font-mono
+    #chatlog
+        padding-top: 2pt
+        padding-left: 12pt
+        height: calc( 100% - 13pt )
+        overflow: auto
+        .line
+            color: #FFFFFF
+            .username
+                font-family: $font-mono
+                color: $accent-color-2
+            .time
+                color: $text-color
+                font-family: $font-main
+                float: right
+                padding-right: 6pt
+    #messagefield
+        border-top: 2px solid $accent-color-1
+        form
+            padding-left: 6pt
+            width: 100%
+            margin: 0
+            input[type="text"]
+                padding-left: 6pt
+                display: inline-block
+                height: 12pt
+                width: calc(100% -  48pt)
+                background-color: $background-color
+                border: 0
+                color: #FFFFFF
+                font-size: 10pt
+                font-family: $font-mono
+            input[type="submit"]
+                display: inline-block
+                width: 36pt
+                background-color: $accent-color-1
+                border-color: $note-color
+                color: #7F8AA2
+                margin-left: auto
+#userlist
+    display: inline-block
+    margin-left: 12pt
+    min-width: 70pt
+    width: 24%
+    overflow: auto
+    .userlist-entry
+        display: block
+        margin: 2pt 0 2pt 0
+
+#registration
+    margin-top: 12pt
+    margin-left: 12pt
+    form
+        margin-top: 12pt
+        input
+            background-color: $accent-color-1
+            border-color: $note-color
+            color: #7F8AA2
+        label
+            display: inline-block
+            width: 90pt
+@media only screen and (max-width: 768px)
+    #secondbar
+        display: none
+    #chatwindow
+        .line
+            .time
+                display: none
+    #registration
+        form
+            #spacing
+                width: 0pt
